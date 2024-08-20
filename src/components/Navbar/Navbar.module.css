@@ -1,0 +1,16 @@
+.navBar {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  padding: 20px 0;
+  background-color: #e76f51;
+  position: sticky;
+  top: 0px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
