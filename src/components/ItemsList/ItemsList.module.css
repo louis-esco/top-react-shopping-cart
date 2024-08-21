@@ -1,0 +1,16 @@
+.itemsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.itemImg {
+  height: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.itemImg img {
+  max-width: 100%;
+  max-height: 100%;
+}
