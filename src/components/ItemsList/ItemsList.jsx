@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./ItemsList.module.css";
 
-export default function ItemsList({ category }) {
+export default function ItemsList({ category, addToCart }) {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -43,6 +43,13 @@ export default function ItemsList({ category }) {
             </div>
             <div className="itemName">{item.title}</div>
             <div className="itemPrice">{item.price}€</div>
+            <button
+              onClick={() => {
+                addToCart(item, 1);
+              }}
+            >
+              Add to cart
+            </button>
           </div>
         ))}
       </div>
@@ -52,4 +59,5 @@ export default function ItemsList({ category }) {
 
 ItemsList.propTypes = {
   category: PropTypes.string,
+  addToCart: PropTypes.func,
 };

@@ -1,8 +1,10 @@
 import { useState } from "react";
 import ItemsList from "../ItemsList/ItemsList";
+import { useOutletContext } from "react-router-dom";
 
 export default function Shop() {
   const [category, setCategory] = useState("electronics");
+  const { addToCart } = useOutletContext();
 
   const handleClick = (category) => {
     setCategory(category);
@@ -40,7 +42,7 @@ export default function Shop() {
           Women&apos;s clothing
         </button>
       </div>
-      <ItemsList category={category} />
+      <ItemsList addToCart={addToCart} category={category} />
     </section>
   );
 }
