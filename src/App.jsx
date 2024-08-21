@@ -15,6 +15,10 @@ function App() {
     return cart.reduce((acc, curr) => acc + curr.qty, 0);
   };
 
+  const getCartPrice = () => {
+    return cart.reduce((acc, curr) => acc + curr.qty * curr.price, 0);
+  };
+
   const addToCart = (item, qty) => {
     const newCart = [...cart];
     const index = newCart.findIndex((el) => el.id === item.id);
@@ -23,10 +27,26 @@ function App() {
     setCart(newCart);
   };
 
+  const removeFromCart = (item, qty) => {
+    const newCart = [...cart];
+    const index = newCart.findIndex((el) => el.id === item.id);
+    if (newCart[index].qty - qty < 1) newCart.splice(index, 1);
+    else newCart[index].qty -= qty;
+    setCart(newCart);
+  };
+
   return (
     <>
       <Navbar getCartLength={getCartLength} />
-      <Outlet context={{ getCart, getCartLength, addToCart }} />
+      <Outlet
+        context={{
+          getCart,
+          getCartLength,
+          getCartPrice,
+          addToCart,
+          removeFromCart,
+        }}
+      />
     </>
   );
 }
