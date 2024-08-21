@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
+import PropTypes from "prop-types";
 
-export default function Navbar() {
+export default function Navbar({ getCartLength }) {
+  const cartLength = getCartLength();
   return (
     <nav className={styles.navBar}>
       <NavLink className={styles.navLink} to={"/"}>
@@ -11,8 +13,12 @@ export default function Navbar() {
         SHOP
       </NavLink>
       <NavLink className={styles.navLink} to={"/cart"}>
-        CART
+        CART ({cartLength})
       </NavLink>
     </nav>
   );
 }
+
+Navbar.propTypes = {
+  getCartLength: PropTypes.func,
+};
