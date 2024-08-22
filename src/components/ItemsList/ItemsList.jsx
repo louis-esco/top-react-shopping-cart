@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./ItemsList.module.css";
+import { useParams } from "react-router-dom";
+import Item from "../Item/ShopItem";
 
-export default function ItemsList({ category, addToCart }) {
+export default function ItemsList({ addToCart }) {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const { category } = useParams();
 
   useEffect(() => {
     const fetchItems = async (category) => {
@@ -37,20 +40,7 @@ export default function ItemsList({ category, addToCart }) {
       {error && <div>{error}</div>}
       <div className={styles.itemsList}>
         {items.map((item) => (
-          <div key={item.id} className={styles.item}>
-            <div className={styles.itemImg}>
-              <img src={item.image} alt="Picture of the item" />
-            </div>
-            <div className={styles.itemName}>{item.title}</div>
-            <div className="itemPrice">{item.price}€</div>
-            <button
-              onClick={() => {
-                addToCart(item, 1);
-              }}
-            >
-              Add to cart
-            </button>
-          </div>
+          <Item key={item.id} item={item} addToCart={addToCart} />
         ))}
       </div>
     </>
