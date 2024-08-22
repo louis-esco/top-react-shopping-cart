@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./ItemsList.module.css";
 import { useParams } from "react-router-dom";
-import Item from "../Item/ShopItem";
+import Item from "../ShopItem/ShopItem";
 
 export default function ItemsList({ addToCart }) {
   const [items, setItems] = useState([]);
