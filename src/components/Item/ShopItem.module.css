@@ -1,0 +1,43 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.itemImg {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemImg img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.itemName {
+  height: 2.4rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.qtyInput {
+  width: 2rem;
+  text-align: center;
+}
+
+.itemShop {
+  display: flex;
+  justify-content: space-between;
+}
