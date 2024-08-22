@@ -9,7 +9,7 @@ export default function Navbar({ getCartLength }) {
       <NavLink className={styles.navLink} to={"/"}>
         HOME
       </NavLink>
-      <NavLink className={styles.navLink} to={"/shop"}>
+      <NavLink className={styles.navLink} to={"/shop/electronics"}>
         SHOP
       </NavLink>
       <NavLink className={styles.navLink} to={"/cart"}>
