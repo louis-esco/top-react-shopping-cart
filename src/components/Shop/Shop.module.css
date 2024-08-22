@@ -1,0 +1,17 @@
+.categories {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.catLink {
+  text-decoration: none;
+  color: #6d6d6d;
+  font-size: 1.2rem;
+}
+
+.active {
+  font-weight: bold;
+}

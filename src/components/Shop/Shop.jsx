@@ -1,48 +1,55 @@
-import { useState } from "react";
 import ItemsList from "../ItemsList/ItemsList";
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, NavLink } from "react-router-dom";
+import styles from "./Shop.module.css";
 
 export default function Shop() {
-  const [category, setCategory] = useState("electronics");
   const { addToCart } = useOutletContext();
-
-  const handleClick = (category) => {
-    setCategory(category);
-  };
 
   return (
     <section className="shop">
-      <div className="categories">
-        <button
-          onClick={() => {
-            handleClick("electronics");
-          }}
+      <div className={styles.categories}>
+        <NavLink
+          className={(navData) =>
+            navData.isActive
+              ? `${styles.active} ${styles.catLink}`
+              : styles.catLink
+          }
+          to={"electronics"}
         >
-          Electronics
-        </button>
-        <button
-          onClick={() => {
-            handleClick("jewelery");
-          }}
+          ELECTRONICS
+        </NavLink>
+        <NavLink
+          className={(navData) =>
+            navData.isActive
+              ? `${styles.active} ${styles.catLink}`
+              : styles.catLink
+          }
+          to={"jewelery"}
         >
-          Jewelry
-        </button>
-        <button
-          onClick={() => {
-            handleClick("men's%20clothing");
-          }}
+          JEWELRY
+        </NavLink>
+        <NavLink
+          className={(navData) =>
+            navData.isActive
+              ? `${styles.active} ${styles.catLink}`
+              : styles.catLink
+          }
+          to={"men's%20clothing"}
         >
-          Men&apos;s clothing
-        </button>
-        <button
-          onClick={() => {
-            handleClick("women's%20clothing");
-          }}
+          MEN&apos;S CLOTHING
+        </NavLink>
+        <NavLink
+          className={(navData) =>
+            navData.isActive
+              ? `${styles.active} ${styles.catLink}`
+              : styles.catLink
+          }
+          to={"women's%20clothing"}
         >
-          Women&apos;s clothing
-        </button>
+          WOMEN&apos;S CLOTHING
+        </NavLink>
       </div>
-      <ItemsList addToCart={addToCart} category={category} />
+      <ItemsList addToCart={addToCart} />
     </section>
   );
 }
