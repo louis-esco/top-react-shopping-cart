@@ -27,20 +27,35 @@ export default function Item({ item, addToCart }) {
         <img src={item.image} alt="Picture of the item" />
       </div>
       <div className={styles.itemName}>{item.title}</div>
-      <div className="itemPrice">{item.price}€</div>
-      <div className={styles.itemShop}>
-        <div className="itemQty">
-          <button onClick={decrement}>-</button>
-          <input
-            name="qty"
-            className={styles.qtyInput}
-            type="number"
-            value={qty}
-            onChange={handleChange}
-          />
-          <button onClick={increment}>+</button>
+      <div className={styles.shopItem}>
+        <div className="itemPrice">{item.price}€</div>
+
+        <div className={styles.itemAction}>
+          <div className={styles.itemQty}>
+            <button
+              onClick={decrement}
+              className={`${styles.qtyBtn} ${styles.leftBtn}`}
+            >
+              -
+            </button>
+            <input
+              name="qty"
+              className={styles.qtyInput}
+              type="number"
+              value={qty}
+              onChange={handleChange}
+            />
+            <button
+              onClick={increment}
+              className={`${styles.qtyBtn} ${styles.rightBtn}`}
+            >
+              +
+            </button>
+          </div>
+          <button className={styles.buyBtn} onClick={handleClick}>
+            Add to cart
+          </button>
         </div>
-        <button onClick={handleClick}>Add to cart</button>
       </div>
     </div>
   );

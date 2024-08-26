@@ -1,7 +1,9 @@
 .item {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+  font-size: 0.9rem;
+  font-weight: 300;
 }
 
 .itemImg {
@@ -17,7 +19,7 @@
 }
 
 .itemName {
-  height: 2.4rem;
+  height: 2rem;
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -32,12 +34,54 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.qtyInput {
-  width: 2rem;
-  text-align: center;
-}
-
-.itemShop {
+.shopItem {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.itemAction {
+  display: flex;
+  gap: 10px;
+}
+
+.itemQty {
+  height: 25px;
+  display: flex;
+}
+
+.qtyInput {
+  width: 1.5rem;
+  text-align: center;
+  z-index: -1;
+}
+
+.qtyBtn,
+.buyBtn {
+  background-color: #5b5b5b;
+  color: white;
+  border: none;
+}
+
+.qtyBtn {
+  width: 20px;
+}
+
+.qtyBtn.leftBtn {
+  border-radius: 3px 0 0 3px;
+  margin-right: -3px;
+}
+
+.qtyBtn.rightBtn {
+  border-radius: 0px 3px 3px 0px;
+  margin-left: -3px;
+}
+
+.qtyBtn:hover,
+.buyBtn:hover {
+  cursor: pointer;
+}
+
+.buyBtn {
+  border-radius: 3px;
 }
