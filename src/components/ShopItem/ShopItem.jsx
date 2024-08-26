@@ -32,6 +32,7 @@ export default function Item({ item, addToCart }) {
         <div className="itemQty">
           <button onClick={decrement}>-</button>
           <input
+            name="qty"
             className={styles.qtyInput}
             type="number"
             value={qty}
