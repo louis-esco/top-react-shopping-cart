@@ -40,13 +40,19 @@ export default function ItemsList() {
 
   return (
     <>
-      {loading && <div>Loading items...</div>}
+      {loading && (
+        <div className={styles.loaderCont}>
+          <div className={styles.loader}></div>
+        </div>
+      )}
       {error && <div>{error}</div>}
-      <div className={styles.itemsList}>
-        {items.map((item) => (
-          <Item key={item.id} item={item} addToCart={addToCart} />
-        ))}
-      </div>
+      {items && (
+        <div className={styles.itemsList}>
+          {items.map((item) => (
+            <Item key={item.id} item={item} addToCart={addToCart} />
+          ))}
+        </div>
+      )}
     </>
   );
 }
