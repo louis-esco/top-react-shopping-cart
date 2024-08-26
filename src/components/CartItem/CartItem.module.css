@@ -1,5 +1,8 @@
 .item {
   display: flex;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 300;
 }
 
 .itemImg {
@@ -13,4 +16,43 @@
 .itemImg img {
   max-width: 100%;
   max-height: 100%;
+}
+
+.itemContent {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.itemTitle {
+  font-weight: 600;
+}
+
+.itemQty {
+  display: flex;
+  gap: 5px;
+}
+
+.qtyBtn {
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 3px;
+}
+
+.qtyBtn:hover,
+.removeBtn:hover {
+  cursor: pointer;
+}
+
+.removeBtn,
+.qtyBtn {
+  background-color: #5b5b5b;
+  border: none;
+  color: #ffffff;
+}
+
+.removeBtn {
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 3px;
 }

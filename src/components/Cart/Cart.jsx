@@ -1,6 +1,7 @@
 import { useOutletContext } from "react-router-dom";
-// import styles from "./Cart.module.css";
+import styles from "./Cart.module.css";
 import CartItem from "../CartItem/CartItem";
+import cartIcon from "../../assets/cart.svg";
 
 export default function Cart() {
   const { getCart, getCartLength, getCartPrice, addToCart, removeFromCart } =
@@ -10,15 +11,20 @@ export default function Cart() {
 
   if (getCartLength() === 0) {
     return (
-      <div>
-        <div>You cart is empty (for now !)</div>
-        <div>Go to the shop to add your first items to your cart !</div>
+      <div className={styles.emptyCart}>
+        <img src={cartIcon} alt="Cart Icon" />
+        <div className={styles.emptyCartMsg1}>
+          You cart is empty (for now !)
+        </div>
+        <div className={styles.emptyCartMsg2}>
+          Go to the shop to add your first items to your cart !
+        </div>
       </div>
     );
   } else {
     return (
       <>
-        <div className="cartList">
+        <div className={styles.cartList}>
           {cart.map((item) => (
             <CartItem
               key={item.id}
@@ -28,7 +34,13 @@ export default function Cart() {
             />
           ))}
         </div>
-        <div className="cartTotal">Cart total price: {cartPrice}€</div>
+        <div className={styles.cartTotal}>
+          <div className={styles.totalPrice}>
+            Cart total price:{" "}
+            <span className={styles.priceValue}>{cartPrice}€</span>
+          </div>
+          <button className={styles.payBtn}>Checkout & pay</button>
+        </div>
       </>
     );
   }

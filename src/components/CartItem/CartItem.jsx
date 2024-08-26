@@ -7,21 +7,30 @@ export default function CartItem({ item, addToCart, removeFromCart }) {
       <div className={styles.itemImg}>
         <img src={item.image} alt="" />
       </div>
-      <div className="itemContent">
-        <div className="itemTitle">{item.title}</div>
+      <div className={styles.itemContent}>
+        <div className={styles.itemTitle}>{item.title}</div>
         <div className="itemPrice">Unit price: {item.price}€</div>
-        <div className="itemQty">
-          Quantity:
-          <button onClick={() => removeFromCart(item, 1)}>-</button> {item.qty}{" "}
-          <button onClick={() => addToCart(item, 1)}>+</button>
+        <div className={styles.itemQty}>
+          Quantity:{" "}
+          <button
+            onClick={() => removeFromCart(item, 1)}
+            className={styles.qtyBtn}
+          >
+            -
+          </button>{" "}
+          {item.qty}{" "}
+          <button className={styles.qtyBtn} onClick={() => addToCart(item, 1)}>
+            +
+          </button>
         </div>
         <div className="itemTotal">Total price: {item.qty * item.price}€</div>
         <button
+          className={styles.removeBtn}
           onClick={() => {
             removeFromCart(item, item.qty);
           }}
         >
-          Remove from cart
+          &#10005; Remove from cart
         </button>
       </div>
     </div>
