@@ -6,7 +6,7 @@ export default function Item({ item, addToCart }) {
   const [qty, setQty] = useState(0);
 
   const decrement = () => {
-    if (qty > 0) setQty(qty - 1);
+    if (qty > 0) setQty(Number(qty) - 1);
   };
 
   const increment = () => {
@@ -14,7 +14,7 @@ export default function Item({ item, addToCart }) {
   };
 
   const handleChange = (e) => {
-    setQty(e.target.value);
+    setQty(Number(e.target.value));
   };
 
   const handleClick = () => {
