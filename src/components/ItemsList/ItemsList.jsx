@@ -12,6 +12,9 @@ export default function ItemsList({ addToCart }) {
 
   useEffect(() => {
     const fetchItems = async (category) => {
+      setLoading(true);
+      setItems([]);
+
       try {
         const response = await fetch(
           `https://fakestoreapi.com/products/category/${category}`
