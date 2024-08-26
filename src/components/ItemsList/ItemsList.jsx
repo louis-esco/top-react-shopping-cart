@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./ItemsList.module.css";
-import { useParams } from "react-router-dom";
+import { useParams, useOutletContext } from "react-router-dom";
 import Item from "../ShopItem/ShopItem";
 
-export default function ItemsList({ addToCart }) {
+export default function ItemsList() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const { category = "electronics" } = useParams();
+  const { category } = useParams();
+  const { addToCart } = useOutletContext();
 
   useEffect(() => {
     const fetchItems = async (category) => {

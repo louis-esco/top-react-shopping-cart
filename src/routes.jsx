@@ -3,6 +3,7 @@ import Home from "./components/Home/Home";
 import Shop from "./components/Shop/Shop";
 import Cart from "./components/Cart/Cart";
 import ItemsList from "./components/ItemsList/ItemsList";
+import { Navigate } from "react-router-dom";
 
 const routes = [
   {
@@ -18,7 +19,11 @@ const routes = [
         element: <Shop />,
         children: [
           {
-            path: "/shop/:category",
+            index: true,
+            element: <Navigate to="/shop/electronics" replace />,
+          },
+          {
+            path: ":category",
             element: <ItemsList />,
           },
         ],

@@ -1,5 +1,4 @@
-import ItemsList from "../ItemsList/ItemsList";
-import { useOutletContext, NavLink } from "react-router-dom";
+import { useOutletContext, NavLink, Outlet } from "react-router-dom";
 import styles from "./Shop.module.css";
 
 export default function Shop() {
@@ -49,7 +48,7 @@ export default function Shop() {
           WOMEN&apos;S CLOTHING
         </NavLink>
       </div>
-      <ItemsList addToCart={addToCart} />
+      <Outlet context={{ addToCart }} />
     </section>
   );
 }

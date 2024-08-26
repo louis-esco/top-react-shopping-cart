@@ -22,7 +22,7 @@ export default function Navbar({ getCartLength }) {
             ? `${styles.active} ${styles.navLink}`
             : styles.navLink
         }
-        to={"/shop/electronics"}
+        to={"/shop"}
       >
         SHOP
       </NavLink>
