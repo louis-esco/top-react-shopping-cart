@@ -8,7 +8,7 @@ export default function ItemsList({ addToCart }) {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const { category } = useParams();
+  const { category = "electronics" } = useParams();
 
   useEffect(() => {
     const fetchItems = async (category) => {

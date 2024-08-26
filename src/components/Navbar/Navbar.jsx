@@ -6,13 +6,34 @@ export default function Navbar({ getCartLength }) {
   const cartLength = getCartLength();
   return (
     <nav className={styles.navBar}>
-      <NavLink className={styles.navLink} to={"/"}>
+      <NavLink
+        className={(navData) =>
+          navData.isActive
+            ? `${styles.active} ${styles.navLink}`
+            : styles.navLink
+        }
+        to={"/"}
+      >
         HOME
       </NavLink>
-      <NavLink className={styles.navLink} to={"/shop/electronics"}>
+      <NavLink
+        className={(navData) =>
+          navData.isActive
+            ? `${styles.active} ${styles.navLink}`
+            : styles.navLink
+        }
+        to={"/shop/electronics"}
+      >
         SHOP
       </NavLink>
-      <NavLink className={styles.navLink} to={"/cart"}>
+      <NavLink
+        className={(navData) =>
+          navData.isActive
+            ? `${styles.active} ${styles.navLink}`
+            : styles.navLink
+        }
+        to={"/cart"}
+      >
         CART ({cartLength})
       </NavLink>
     </nav>
