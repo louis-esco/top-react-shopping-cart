@@ -1,0 +1,28 @@
+.errorPage {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorTitle {
+  font-family: "Segoe Print", "Bradley Hand", Chilanka, TSCu_Comic, casual,
+    cursive;
+  font-size: 2rem;
+}
+
+.returnBtn {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.returnBtn:hover {
+  cursor: pointer;
+}

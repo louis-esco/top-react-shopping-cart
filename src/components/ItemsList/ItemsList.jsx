@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./ItemsList.module.css";
-import { useParams, useOutletContext } from "react-router-dom";
+import { useParams, useOutletContext, Link } from "react-router-dom";
 import Item from "../ShopItem/ShopItem";
 
 export default function ItemsList() {
@@ -24,8 +24,9 @@ export default function ItemsList() {
           throw new Error(`HTTP error: Status ${response.status}`);
         }
 
-        const items = await response.json();
-        setItems(items);
+        const itemsData = await response.json();
+        if (itemsData.length > 0) setItems(itemsData);
+        else setItems(null);
         setError(null);
       } catch (err) {
         setError(err.message);
@@ -51,6 +52,14 @@ export default function ItemsList() {
           {items.map((item) => (
             <Item key={item.id} item={item} addToCart={addToCart} />
           ))}
+        </div>
+      )}
+      {!items && (
+        <div className={styles.itemsListError}>
+          <h2>Oops nothing here</h2>
+          <Link className={styles.errorBtn} to={"/shop"}>
+            Back to shop
+          </Link>
         </div>
       )}
     </>

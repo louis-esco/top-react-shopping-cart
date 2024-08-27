@@ -29,3 +29,19 @@
     transform: rotate(1turn);
   }
 }
+
+.itemsListError {
+  height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorBtn {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+}
