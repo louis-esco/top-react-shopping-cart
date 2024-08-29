@@ -1,0 +1,47 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Navbar component > Renders Navbar 1`] = `
+<div>
+  <nav
+    class="_navBar_278c00"
+  >
+    <div
+      class="_shopName_278c00"
+    >
+      <img
+        alt="shop icon"
+        src="/src/assets/icon.svg"
+      />
+      <div>
+        Louis's shop
+      </div>
+    </div>
+    <div
+      class="_links_278c00"
+    >
+      <a
+        aria-current="page"
+        class="_active_278c00 _navLink_278c00"
+        href="/"
+      >
+        HOME
+      </a>
+      <a
+        class="_navLink_278c00"
+        href="/shop"
+      >
+        SHOP
+      </a>
+      <a
+        class="_navLink_278c00 _cart_278c00"
+        href="/cart"
+      >
+        CART
+        <div
+          class="_cartLength_278c00"
+        />
+      </a>
+    </div>
+  </nav>
+</div>
+`;

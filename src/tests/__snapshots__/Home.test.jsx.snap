@@ -1,0 +1,43 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Home component > Renders Home 1`] = `
+<div>
+  <div
+    class="_homeContainer_345077"
+  >
+    <img
+      alt="Hand waving"
+      src="/src/assets/hand.svg"
+    />
+    <h2
+      class="_welcomeMsg_345077"
+    >
+      Welcome to Louis's shop ! 
+    </h2>
+    <div>
+      We sell all sorts of stuff, hopefully you'll find what you need here !
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Navbar component > Renders Home 1`] = `
+<div>
+  <div
+    class="_homeContainer_345077"
+  >
+    <img
+      alt="Hand waving"
+      src="/src/assets/hand.svg"
+    />
+    <h2
+      class="_welcomeMsg_345077"
+    >
+      Welcome to Louis's shop ! 
+    </h2>
+    <div>
+      We sell all sorts of stuff, hopefully you'll find what you need here !
+    </div>
+  </div>
+</div>
+`;

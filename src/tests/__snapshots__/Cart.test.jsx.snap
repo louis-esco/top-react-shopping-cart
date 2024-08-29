@@ -1,0 +1,153 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Cart component > Render Cart 1`] = `
+<div>
+  <div
+    class="_cartList_f8af68"
+  >
+    <div
+      class="_item_61ad6d"
+    >
+      <div
+        class="_itemImg_61ad6d"
+      >
+        <img
+          alt=""
+          src="https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg"
+        />
+      </div>
+      <div
+        class="_itemContent_61ad6d"
+      >
+        <div
+          class="_itemTitle_61ad6d"
+        >
+          Nice item
+        </div>
+        <div
+          class="itemPrice"
+        >
+          Unit price: 
+          64
+          €
+        </div>
+        <div
+          class="_itemQty_61ad6d"
+        >
+          Quantity:
+           
+          <button
+            class="_qtyBtn_61ad6d"
+          >
+            -
+          </button>
+           
+          <div>
+            2
+          </div>
+           
+          <button
+            class="_qtyBtn_61ad6d"
+          >
+            +
+          </button>
+        </div>
+        <div
+          class="itemTotal"
+        >
+          Total price: 
+          128
+          €
+        </div>
+        <button
+          class="_removeBtn_61ad6d"
+        >
+          ✕ Remove from cart
+        </button>
+      </div>
+    </div>
+    <div
+      class="_item_61ad6d"
+    >
+      <div
+        class="_itemImg_61ad6d"
+      >
+        <img
+          alt=""
+          src="https://fakestoreapi.com/img/61IBBVJvSDL._AC_SYUSI879_.jpg"
+        />
+      </div>
+      <div
+        class="_itemContent_61ad6d"
+      >
+        <div
+          class="_itemTitle_61ad6d"
+        >
+          Nicer item
+        </div>
+        <div
+          class="itemPrice"
+        >
+          Unit price: 
+          65
+          €
+        </div>
+        <div
+          class="_itemQty_61ad6d"
+        >
+          Quantity:
+           
+          <button
+            class="_qtyBtn_61ad6d"
+          >
+            -
+          </button>
+           
+          <div>
+            3
+          </div>
+           
+          <button
+            class="_qtyBtn_61ad6d"
+          >
+            +
+          </button>
+        </div>
+        <div
+          class="itemTotal"
+        >
+          Total price: 
+          195
+          €
+        </div>
+        <button
+          class="_removeBtn_61ad6d"
+        >
+          ✕ Remove from cart
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="_cartTotal_f8af68"
+  >
+    <div
+      class="_totalPrice_f8af68"
+    >
+      Cart total price:
+       
+      <span
+        class="_priceValue_f8af68"
+      >
+        156.00
+        €
+      </span>
+    </div>
+    <button
+      class="_payBtn_f8af68"
+    >
+      Checkout & pay
+    </button>
+  </div>
+</div>
+`;

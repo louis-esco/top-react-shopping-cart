@@ -1,0 +1,123 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ShopItem component > Render ShopItem 1`] = `
+<div>
+  <div
+    class="_item_859760"
+  >
+    <div
+      class="_itemImg_859760"
+    >
+      <img
+        alt="Picture of the item"
+        src="https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg"
+      />
+    </div>
+    <div
+      class="_itemName_859760"
+    >
+      Nice item
+    </div>
+    <div
+      class="_shopItem_859760"
+    >
+      <div
+        class="itemPrice"
+      >
+        64
+        €
+      </div>
+      <div
+        class="_itemAction_859760"
+      >
+        <div
+          class="_itemQty_859760"
+        >
+          <button
+            class="_qtyBtn_859760 _leftBtn_859760"
+          >
+            -
+          </button>
+          <input
+            class="_qtyInput_859760"
+            name="qty"
+            type="number"
+            value="0"
+          />
+          <button
+            class="_qtyBtn_859760 _rightBtn_859760"
+          >
+            +
+          </button>
+        </div>
+        <button
+          class="_buyBtn_859760"
+        >
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ShopItem component > Renders ShopItem 1`] = `
+<div>
+  <div
+    class="_item_859760"
+  >
+    <div
+      class="_itemImg_859760"
+    >
+      <img
+        alt="Picture of the item"
+        src="https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg"
+      />
+    </div>
+    <div
+      class="_itemName_859760"
+    >
+      Nice item
+    </div>
+    <div
+      class="_shopItem_859760"
+    >
+      <div
+        class="itemPrice"
+      >
+        64
+        €
+      </div>
+      <div
+        class="_itemAction_859760"
+      >
+        <div
+          class="_itemQty_859760"
+        >
+          <button
+            class="_qtyBtn_859760 _leftBtn_859760"
+          >
+            -
+          </button>
+          <input
+            class="_qtyInput_859760"
+            name="qty"
+            type="number"
+            value="0"
+          />
+          <button
+            class="_qtyBtn_859760 _rightBtn_859760"
+          >
+            +
+          </button>
+        </div>
+        <button
+          class="_buyBtn_859760"
+        >
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
