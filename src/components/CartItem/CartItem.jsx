@@ -18,7 +18,7 @@ export default function CartItem({ item, addToCart, removeFromCart }) {
           >
             -
           </button>{" "}
-          {item.qty}{" "}
+          <div>{item.qty}</div>{" "}
           <button className={styles.qtyBtn} onClick={() => addToCart(item, 1)}>
             +
           </button>
