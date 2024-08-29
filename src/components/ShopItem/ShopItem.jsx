@@ -2,7 +2,7 @@ import styles from "./ShopItem.module.css";
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-export default function Item({ item, addToCart }) {
+export default function ShopItem({ item, addToCart }) {
   const [qty, setQty] = useState(0);
 
   const decrement = () => {
@@ -61,7 +61,7 @@ export default function Item({ item, addToCart }) {
   );
 }
 
-Item.propTypes = {
+ShopItem.propTypes = {
   item: PropTypes.object,
   addToCart: PropTypes.func,
 };

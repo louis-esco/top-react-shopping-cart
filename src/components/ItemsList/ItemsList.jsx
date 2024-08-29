@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./ItemsList.module.css";
 import { useParams, useOutletContext, Link } from "react-router-dom";
-import Item from "../ShopItem/ShopItem";
+import ShopItem from "../ShopItem/ShopItem";
 
 export default function ItemsList() {
   const [items, setItems] = useState([]);
@@ -50,7 +50,7 @@ export default function ItemsList() {
       {items && (
         <div className={styles.itemsList}>
           {items.map((item) => (
-            <Item key={item.id} item={item} addToCart={addToCart} />
+            <ShopItem key={item.id} item={item} addToCart={addToCart} />
           ))}
         </div>
       )}
