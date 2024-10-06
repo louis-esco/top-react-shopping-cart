@@ -6,13 +6,14 @@ Deployed at: https://top-react-shoppingcart.netlify.app/
 
 ## Stack
 - React
+- Vitest + React Testing Library
 
 ## Learnings
 - Setup a React app with React router
 - Pass data to components with useState and useOutlet
 - Fetch data from API with useEffect
 - Style the app with CSS modules
-- Test app with Vite test and React Testing library
+- Test app with Vitest and React Testing library
 
 ## Notes
 - Testing could be improved
