@@ -5,7 +5,6 @@ import { useState } from "react";
 
 function App() {
   const [cart, setCart] = useState([]);
-  window.cart = cart;
 
   const getCart = () => {
     return cart;
